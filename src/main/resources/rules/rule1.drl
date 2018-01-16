@@ -1,5 +1,5 @@
 package rules;
-import domain.Person
+import com.liuchy.domain.Person
 rule "test"
 	when
         $p : Person(age > 30);
