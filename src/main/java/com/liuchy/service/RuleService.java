@@ -14,9 +14,9 @@ public class RuleService {
     @Autowired
     private KieContainer kieContainer;
 
-    public void getKieSession(Person person) {
+    public void getKieSession(String appId) {
         KieSession kieSession = kieContainer.newKieSession("rulesSession");
-        kieSession.insert(person);
+        //kieSession.insert(person);query domain
         kieSession.fireAllRules();
         kieSession.dispose();
     }
